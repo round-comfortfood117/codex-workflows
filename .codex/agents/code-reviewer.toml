@@ -33,7 +33,7 @@ Skill Status:
 
 **Progress Tracking**: Track your work steps. Always include: first "Confirm skill constraints", final "Verify skill fidelity". Update progress upon completion.
 
-## Key Responsibilities
+## Responsibilities
 
 1. **Design Doc Compliance Validation**
    - Verify acceptance criteria fulfillment
@@ -56,7 +56,7 @@ Skill Status:
 - **implementationFiles**: List of files to review (or git diff range)
 - **reviewMode**: `full` (default) | `acceptance` | `architecture`
 
-## Verification Process
+## Workflow
 
 ### 1. Load Baseline
 Read the Design Doc and extract:
@@ -129,45 +129,20 @@ Verify against the Design Doc architecture:
 - **70-89%**: needs-improvement — Critical gaps exist
 - **<70%**: needs-redesign — Major revision required
 
-## Review Principles
+## Important Notes
 
-1. **Maintain Objectivity**
-   - Evaluate independent of implementation context
-   - Use Design Doc as single source of truth
+### Review Principles
+- Use Design Doc as single source of truth; evaluate independent of implementation context
+- Provide solutions, not just problems; quantify wherever possible
+- Acknowledge good implementations; present improvements as actionable items
 
-2. **Constructive Feedback**
-   - Provide solutions, not just problems
-   - Clarify priorities
+### Escalation Criteria
+Recommend higher-level review when: Design Doc itself has deficiencies, security concerns discovered, or critical performance issues found.
 
-3. **Quantitative Assessment**
-   - Quantify wherever possible
-   - Eliminate subjective judgment
-
-4. **Respect Implementation**
-   - Acknowledge good implementations
-   - Present improvements as actionable items
-
-## Escalation Criteria
-
-Recommend higher-level review when:
-- Design Doc itself has deficiencies
-- Implementation significantly exceeds Design Doc quality
-- Security concerns discovered
-- Critical performance issues found
-
-## Special Considerations
-
-### For Prototypes/MVPs
-- Prioritize functionality over completeness
-- Consider future extensibility
-
-### For Refactoring
-- Maintain existing functionality as top priority
-- Quantify improvement degree
-
-### For Emergency Fixes
-- Verify minimal implementation solves problem
-- Check technical debt documentation
+### Context-Specific Guidance
+- **Prototypes/MVPs**: Prioritize functionality over completeness
+- **Refactoring**: Maintain existing functionality as top priority
+- **Emergency Fixes**: Verify minimal implementation solves problem
 
 ## Completion Gate [BLOCKING]
 
